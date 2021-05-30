@@ -1,15 +1,16 @@
-plugins {
-    id 'com.android.application'
-}
+if (isRelease){
+    apply plugin: 'com.android.library'
+} else { apply plugin: 'com.android.application'}
 def androidID = rootProject.ext.androidID
 def dependenciesID = rootProject.ext.dependenciesID
 def appID = rootProject.ext.appID
+
 android {
     compileSdkVersion androidID.compileSdkVersion
     buildToolsVersion androidID.buildToolsVersion
 
     defaultConfig {
-        applicationId appID.app
+        if (!isRelease){applicationId appID.main}
         minSdkVersion androidID.minSdkVersion
         targetSdkVersion androidID.targetSdkVersion
         versionCode androidID.versionCode
@@ -17,7 +18,6 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
-        //设置路由名称
         javaCompileOptions {
             annotationProcessorOptions {
                 arguments = [ AROUTER_MODULE_NAME : project.getName() ]
@@ -31,9 +31,21 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    sourceSets{
+        main{
+            if (isRelease){
+                manifest.srcFile 'src/main/module/AndroidManifest.xml'
+            }else{
+                manifest.srcFile 'src/main/AndroidManifest.xml'
+            }
+        }
+    }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildFeatures {
+        viewBinding true
     }
 }
 
@@ -43,9 +55,14 @@ dependencies {
     implementation dependenciesID.material
     implementation dependenciesID.constraintlayout
 
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.2.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0'
+    implementation 'androidx.navigation:navigation-fragment:2.3.0'
+    implementation 'androidx.navigation:navigation-ui:2.3.0'
+
     testImplementation dependenciesID.junit
     androidTestImplementation dependenciesID.androidx_test_ext
     androidTestImplementation dependenciesID.androidx_test_espresso
-//    testImplementation 'junit:junit:4.+'
 
+    annotationProcessor rootProject.ext.router.arouter_compiler
 }

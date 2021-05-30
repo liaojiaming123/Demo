@@ -1,0 +1,36 @@
+ext {
+    name = "AndroidDemo" //项目名称
+    isRelease = true //组件化模式开关
+    //设置androidID
+    androidID = [
+            compileSdkVersion: 30,
+            buildToolsVersion: "30.0.3",
+            applicationId: "com.liaojiaming.android",
+            minSdkVersion: 23,
+            targetSdkVersion: 30,
+            versionCode: 1,
+            versionName: "1.0"
+    ]
+    //设置APPID
+    appID = [
+            app: "com.example.android",
+            main: "com.example.main",
+    ]
+    //第三方库依赖
+    dependenciesID = [
+            appcompat: 'androidx.appcompat:appcompat:1.2.0',
+            material: 'com.google.android.material:material:1.2.1',
+            constraintlayout: 'androidx.constraintlayout:constraintlayout:2.0.1',
+            junit: 'junit:junit:4.13.2',
+
+            androidx_test_ext: 'androidx.test.ext:junit:1.1.2',
+            androidx_test_espresso: 'androidx.test.espresso:espresso-core:3.3.0',
+
+            utilcodex: 'com.blankj:utilcodex:1.30.6'
+    ]
+    //路由依赖
+    router = [
+            arouter_api: 'com.alibaba:arouter-api:1.5.1',
+            arouter_compiler: 'com.alibaba:arouter-compiler:1.5.1'
+    ]
+}
