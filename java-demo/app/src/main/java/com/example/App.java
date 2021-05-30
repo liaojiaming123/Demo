@@ -3,9 +3,13 @@
  */
 package com.example;
 
+import com.example.test.FileUtilTest;
 import com.example.test.OkhttpTest;
 import com.example.test.RetrofitTest;
 import com.example.test.RxjavaTest;
+
+import java.io.File;
+import java.io.IOException;
 
 public class App {
     public String getGreeting() {
@@ -14,10 +18,15 @@ public class App {
 
     public static void main(String[] args) {
         System.out.println(new App().getGreeting());
-//        OkhttpTest test = new OkhttpTest();
-//        RetrofitTest test = new RetrofitTest();
-        RxjavaTest test1 = new RxjavaTest();
-        test1.start();
-//        test.getReq();
+        FileUtilTest test = new FileUtilTest();
+        OkhttpTest test1 = new OkhttpTest();
+        test1.getImg();
+        test1.getReq();
+        try {
+            test.saveFile();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
     }
 }
