@@ -23,8 +23,9 @@ dependencies {
     // This dependency is used by the application.
     implementation 'com.google.guava:guava:30.0-jre'
 
-    implementation "io.reactivex.rxjava3:rxjava:3.0.12"
-    implementation "com.squareup.retrofit2:retrofit:2.9.0"
+    implementation 'io.reactivex.rxjava3:rxjava:3.0.12'
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.github.getActivity:EasyHttp:9.6'
 }
 
 application {
