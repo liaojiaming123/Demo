@@ -43,5 +43,5 @@ dependencies {
     testImplementation dependenciesID.junit
     androidTestImplementation dependenciesID.androidx_test_ext
     androidTestImplementation dependenciesID.androidx_test_espresso
-    api rootProject.ext.router.arouter_api
+//    api rootProject.ext.router.arouter_api
 }
