@@ -54,15 +54,18 @@ dependencies {
     implementation dependenciesID.appcompat
     implementation dependenciesID.material
     implementation dependenciesID.constraintlayout
+    implementation project(":common")
 
     implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.2.0'
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0'
     implementation 'androidx.navigation:navigation-fragment:2.3.0'
     implementation 'androidx.navigation:navigation-ui:2.3.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
 
     testImplementation dependenciesID.junit
     androidTestImplementation dependenciesID.androidx_test_ext
     androidTestImplementation dependenciesID.androidx_test_espresso
 
+//    api rootProject.ext.router.arouter_api
     annotationProcessor rootProject.ext.router.arouter_compiler
 }

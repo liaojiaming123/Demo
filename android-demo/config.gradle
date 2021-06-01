@@ -1,11 +1,11 @@
 ext {
     name = "AndroidDemo" //项目名称
-    isRelease = true //组件化模式开关
+    isRelease = false //组件化模式开关
     //设置androidID
     androidID = [
             compileSdkVersion: 30,
             buildToolsVersion: "30.0.3",
-            applicationId: "com.liaojiaming.android",
+            applicationId: "com.example.android",
             minSdkVersion: 23,
             targetSdkVersion: 30,
             versionCode: 1,

@@ -1,28 +1,27 @@
 plugins {
-    id 'com.android.application'
+    id 'com.android.library'
 }
 def androidID = rootProject.ext.androidID
 def dependenciesID = rootProject.ext.dependenciesID
-def appID = rootProject.ext.appID
+
 android {
     compileSdkVersion androidID.compileSdkVersion
     buildToolsVersion androidID.buildToolsVersion
 
     defaultConfig {
-        applicationId appID.app
         minSdkVersion androidID.minSdkVersion
         targetSdkVersion androidID.targetSdkVersion
         versionCode androidID.versionCode
         versionName androidID.versionName
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
 
-        //设置路由名称
-        javaCompileOptions {
-            annotationProcessorOptions {
-                arguments = [ AROUTER_MODULE_NAME : project.getName() ]
-            }
-        }
+//        javaCompileOptions {
+//            annotationProcessorOptions {
+//                arguments = [ AROUTER_MODULE_NAME : project.getName() ]
+//            }
+//        }
     }
 
     buildTypes {
@@ -38,16 +37,11 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: "libs", includes: ["*.jar"])
+//    implementation fileTree(dir: "libs", includes: ["*.jar"])
     implementation dependenciesID.appcompat
     implementation dependenciesID.material
-    implementation dependenciesID.constraintlayout
-    implementation project(":common")
-    implementation project(":main")
-
     testImplementation dependenciesID.junit
     androidTestImplementation dependenciesID.androidx_test_ext
     androidTestImplementation dependenciesID.androidx_test_espresso
-//    testImplementation 'junit:junit:4.+'
-
+    api rootProject.ext.router.arouter_api
 }
