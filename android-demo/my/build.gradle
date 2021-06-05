@@ -1,21 +1,22 @@
-plugins {
-    id 'com.android.library'
-}
+if (isRelease){
+    apply plugin: 'com.android.library'
+} else { apply plugin: 'com.android.application'}
 def androidID = rootProject.ext.androidID
 def dependenciesID = rootProject.ext.dependenciesID
+def appID = rootProject.ext.appID
 
 android {
     compileSdkVersion androidID.compileSdkVersion
     buildToolsVersion androidID.buildToolsVersion
 
     defaultConfig {
+        if (!isRelease){applicationId appID.my}
         minSdkVersion androidID.minSdkVersion
         targetSdkVersion androidID.targetSdkVersion
         versionCode androidID.versionCode
         versionName androidID.versionName
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        consumerProguardFiles "consumer-rules.pro"
 
 //        javaCompileOptions {
 //            annotationProcessorOptions {
@@ -30,22 +31,37 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    sourceSets{
+        main{
+            if (isRelease){
+                manifest.srcFile 'src/main/module/AndroidManifest.xml'
+            }else{
+                manifest.srcFile 'src/main/AndroidManifest.xml'
+            }
+        }
+    }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+//    buildFeatures {
+//        viewBinding true
+//    }
 }
 
 dependencies {
-//    implementation fileTree(dir: "libs", includes: ["*.jar"])
+    implementation fileTree(dir: "libs", includes: ["*.jar"])
     implementation dependenciesID.appcompat
     implementation dependenciesID.material
     implementation dependenciesID.constraintlayout
+    implementation project(":common")
+
     testImplementation dependenciesID.junit
     androidTestImplementation dependenciesID.androidx_test_ext
     androidTestImplementation dependenciesID.androidx_test_espresso
 
-//    api router.wm
-    api router.drouter
+    annotationProcessor 'com.sankuai.waimai.router:compiler:1.2.0'
+
 //    api rootProject.ext.router.arouter_api
+//    annotationProcessor rootProject.ext.router.arouter_compiler
 }

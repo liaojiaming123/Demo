@@ -1,9 +1,12 @@
 plugins {
     id 'com.android.application'
 }
+//apply plugin: 'WMRouter'
+apply plugin: 'com.didi.drouter'
 def androidID = rootProject.ext.androidID
 def dependenciesID = rootProject.ext.dependenciesID
 def appID = rootProject.ext.appID
+//def router = rootProject.ext.router
 android {
     compileSdkVersion androidID.compileSdkVersion
     buildToolsVersion androidID.buildToolsVersion
@@ -38,7 +41,7 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: "libs", includes: ["*.jar"])
+//    implementation fileTree(dir: "libs", includes: ["*.jar"])
     implementation dependenciesID.appcompat
     implementation dependenciesID.material
     implementation dependenciesID.constraintlayout
@@ -48,6 +51,8 @@ dependencies {
     testImplementation dependenciesID.junit
     androidTestImplementation dependenciesID.androidx_test_ext
     androidTestImplementation dependenciesID.androidx_test_espresso
+    api router.wm
+//    api router.drouter
 //    testImplementation 'junit:junit:4.+'
 
 }

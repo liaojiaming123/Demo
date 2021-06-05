@@ -2,6 +2,7 @@ package com.example.main;
 
 import android.os.Bundle;
 
+import com.didi.drouter.annotation.Router;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,7 +12,10 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 import com.example.main.databinding.ActivityMainBinding;
+//import com.sankuai.waimai.router.annotation.RouterUri;
 
+@Router(path = "/main_activity")
+//@RouterUri(path = "/main_activity")
 public class MainActivity extends AppCompatActivity {
 
     private ActivityMainBinding binding;
