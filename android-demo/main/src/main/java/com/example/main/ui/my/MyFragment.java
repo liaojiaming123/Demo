@@ -16,7 +16,7 @@ import com.example.main.R;
 
 public class MyFragment extends Fragment {
 
-    private MyViewModel mViewModel;
+//    private MyViewModel mViewModel;
 
     public static MyFragment newInstance() {
         return new MyFragment();
@@ -31,7 +31,7 @@ public class MyFragment extends Fragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        mViewModel = new ViewModelProvider(this).get(MyViewModel.class);
+//        mViewModel = new ViewModelProvider(this).get(MyViewModel.class);
         // TODO: Use the ViewModel
     }
 

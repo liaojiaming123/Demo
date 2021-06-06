@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".wdg.EvActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:paddingHorizontal="8dp"
+            android:text="EditText 默认:" />
+
+        <EditText
+            android:id="@+id/ev_base_fragment_normal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:hint="请输入关键字..."
+            android:paddingHorizontal="16dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:paddingHorizontal="8dp"
+            android:text="EditText 背景边框:" />
+
+        <EditText
+            android:id="@+id/ev_base_fragment_background"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_tv"
+            android:hint="请输入关键字..."
+            android:paddingHorizontal="16dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:paddingHorizontal="8dp"
+            android:text="EditText 焦点全选:" />
+
+        <EditText
+            android:id="@+id/ev_base_fragment_focus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_tv"
+            android:paddingHorizontal="16dp"
+            android:selectAllOnFocus="true"
+            android:text="请输入关键字..."
+            android:textColor="@color/green_900" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:paddingHorizontal="8dp"
+            android:text="EditText 多行:" />
+
+        <EditText
+            android:id="@+id/ev_base_fragment_lines"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_tv"
+            android:minLines="2"
+            android:paddingHorizontal="16dp"
+            android:selectAllOnFocus="true"
+            android:text="当那繁华落尽，剩下的是满地忧伤。"
+            android:textColor="@color/green_900" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:paddingHorizontal="8dp"
+            android:text="EditText password:" />
+
+        <EditText
+            android:id="@+id/ev_base_fragment_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_tv"
+            android:hint="请输入密码..."
+            android:inputType="textPassword"
+            android:paddingHorizontal="16dp"
+            android:selectAllOnFocus="true" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:paddingHorizontal="8dp"
+            android:text="EditText datetime:" />
+
+        <EditText
+            android:id="@+id/ev_base_fragment_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_tv"
+            android:hint="请输入时间日期"
+            android:inputType="datetime"
+            android:paddingHorizontal="16dp"
+            android:selectAllOnFocus="true" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

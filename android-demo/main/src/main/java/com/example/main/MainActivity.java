@@ -11,21 +11,22 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
-import com.example.main.databinding.ActivityMainBinding;
+//import com.example.main.databinding.ActivityMainBinding;
 //import com.sankuai.waimai.router.annotation.RouterUri;
 
 @Router(path = "/main_activity")
 //@RouterUri(path = "/main_activity")
 public class MainActivity extends AppCompatActivity {
 
-    private ActivityMainBinding binding;
+//    private ActivityMainBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
 
-        binding = ActivityMainBinding.inflate(getLayoutInflater());
-        setContentView(binding.getRoot());
+//        binding = ActivityMainBinding.inflate(getLayoutInflater());
+//        setContentView(binding.getRoot());
 
         BottomNavigationView navView = findViewById(R.id.nav_view);
         // Passing each menu ID as a set of Ids because each
@@ -35,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
                 .build(); //设置标题栏状态
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_activity_main);
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
-        NavigationUI.setupWithNavController(binding.navView, navController);
+        NavigationUI.setupWithNavController(navView, navController);
     }
 
 }

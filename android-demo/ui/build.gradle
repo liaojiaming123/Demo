@@ -1,0 +1,60 @@
+if (isRelease){
+    apply plugin: 'com.android.library'
+} else { apply plugin: 'com.android.application'}
+def androidID = rootProject.ext.androidID
+def dependenciesID = rootProject.ext.dependenciesID
+def appID = rootProject.ext.appID
+
+android {
+    compileSdkVersion androidID.compileSdkVersion
+    buildToolsVersion androidID.buildToolsVersion
+
+    defaultConfig {
+        if (!isRelease){applicationId appID.my}
+        minSdkVersion androidID.minSdkVersion
+        targetSdkVersion androidID.targetSdkVersion
+        versionCode androidID.versionCode
+        versionName androidID.versionName
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    sourceSets{
+        main{
+            if (isRelease){
+                manifest.srcFile 'src/main/module/AndroidManifest.xml'
+            }else{
+                manifest.srcFile 'src/main/AndroidManifest.xml'
+            }
+            res.srcDirs = [
+                    'src/main/res/layout/widget',
+                    'src/main/res/layout',
+                    'src/main/res'
+            ]
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation dependenciesID.appcompat
+    implementation dependenciesID.material
+    implementation dependenciesID.constraintlayout
+    implementation project(":common")
+
+    testImplementation dependenciesID.junit
+    androidTestImplementation dependenciesID.androidx_test_ext
+    androidTestImplementation dependenciesID.androidx_test_espresso
+
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.2.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0'
+}

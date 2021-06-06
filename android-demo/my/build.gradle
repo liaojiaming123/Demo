@@ -60,7 +60,7 @@ dependencies {
     androidTestImplementation dependenciesID.androidx_test_ext
     androidTestImplementation dependenciesID.androidx_test_espresso
 
-    annotationProcessor 'com.sankuai.waimai.router:compiler:1.2.0'
+//    annotationProcessor 'com.sankuai.waimai.router:compiler:1.2.0'
 
 //    api rootProject.ext.router.arouter_api
 //    annotationProcessor rootProject.ext.router.arouter_compiler
