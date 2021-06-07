@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".wdg.BtnActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:paddingHorizontal="8dp"
+            android:text="Button 默认:" />
+
+        <Button
+            android:id="@+id/btn_normal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="10dp"
+            android:text="按钮示例" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:paddingHorizontal="8dp"
+            android:text="Button 背景:" />
+
+        <Button
+            android:id="@+id/btn_background"
+            android:layout_width="90dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/red_200"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="10dp"
+            android:text="按钮示例" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:paddingHorizontal="8dp"
+            android:text="Button 圆角:" />
+
+        <Button
+            android:id="@+id/btn_border"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/bg_btn"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="10dp"
+            android:text="按钮示例" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:paddingHorizontal="8dp"
+            android:text="Button 点击状态:" />
+
+        <Button
+            android:id="@+id/btn_selected"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/bg_btn_selector"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="10dp"
+            android:text="按钮示例" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:paddingHorizontal="8dp"
+            android:text="Button 自定义样式:" />
+
+        <Button
+            android:id="@+id/btn_click"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="10dp"
+            android:text="按钮示例"
+            android:theme="@style/MyButton" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:paddingHorizontal="8dp"
+            android:text="ImageButton :" />
+
+        <ImageButton
+            android:id="@+id/ibtn_simple"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/ic_arrow_circle_down_24" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

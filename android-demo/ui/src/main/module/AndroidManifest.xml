@@ -3,7 +3,11 @@
     package="com.example.ui">
 
     <application>
-        <activity android:name=".wdg.EvActivity"></activity>
+        <activity android:name=".wdg.SwitchActivity"></activity>
+        <activity android:name=".wdg.CheckActivity" />
+        <activity android:name=".wdg.BtnActivity" />
+        <activity android:name=".wdg.IvActivity" />
+        <activity android:name=".wdg.EvActivity" />
         <activity android:name=".wdg.TvActivity" />
         <activity android:name=".UiActivity" />
     </application>

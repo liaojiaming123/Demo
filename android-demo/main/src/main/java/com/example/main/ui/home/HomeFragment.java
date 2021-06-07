@@ -22,13 +22,13 @@ import com.example.main.R;
 
 @Router(path = "/home_fragment")
 public class HomeFragment extends Fragment {
-    private FragmentManager fragmentManager;
+//    private FragmentManager fragmentManager;
     private Context context;
 
     @Override
     public void onCreate(@Nullable @org.jetbrains.annotations.Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        fragmentManager = getParentFragmentManager();
+//        fragmentManager = getParentFragmentManager();
         context = BaseApplication.getContext();
     }
 
@@ -40,13 +40,13 @@ public class HomeFragment extends Fragment {
     @Override
     public void onStart() {
         super.onStart();
-        Button home_test = getActivity().findViewById(R.id.home_test);
-        home_test.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                DRouter.build("/my_activity").start();
-            }
-        });
+//        Button home_test = getActivity().findViewById(R.id.home_test);
+//        home_test.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                DRouter.build("/my_activity").start();
+//            }
+//        });
         TextView wdg_tv = getActivity().findViewById(R.id.wdg_tv);
         wdg_tv.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,7 +59,34 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 DRouter.build("/ev_activity").start();
-
+            }
+        });
+        TextView wdg_iv = getActivity().findViewById(R.id.wdg_iv);
+        wdg_iv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DRouter.build("/iv_activity").start();
+            }
+        });
+        TextView wdg_btn = getActivity().findViewById(R.id.wdg_btn);
+        wdg_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DRouter.build("/btn_activity").start();
+            }
+        });
+        TextView wdg_check = getActivity().findViewById(R.id.wdg_check);
+        wdg_check.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DRouter.build("/check_activity").start();
+            }
+        });
+        TextView wdg_switch = getActivity().findViewById(R.id.wdg_switch);
+        wdg_switch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DRouter.build("/switch_activity").start();
             }
         });
     }

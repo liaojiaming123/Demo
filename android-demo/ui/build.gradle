@@ -33,7 +33,7 @@ android {
                 manifest.srcFile 'src/main/AndroidManifest.xml'
             }
             res.srcDirs = [
-                    'src/main/res/layout/widget',
+                    'src/main/res/layout/wdg',
                     'src/main/res/layout',
                     'src/main/res'
             ]

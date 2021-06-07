@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".ui.home.HomeFragment">
     <LinearLayout
-        android:id="@+id/home_lv"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
@@ -31,7 +30,6 @@
                 android:id="@+id/wdg_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:gravity="center"
                 android:paddingHorizontal="15dp"
                 android:paddingVertical="5dp"
@@ -44,7 +42,6 @@
                 android:id="@+id/wdg_ev"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:gravity="center"
                 android:paddingHorizontal="15dp"
                 android:paddingVertical="5dp"
@@ -56,7 +53,6 @@
                 android:id="@+id/wdg_iv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:gravity="center"
                 android:paddingHorizontal="15dp"
                 android:paddingVertical="5dp"
@@ -69,11 +65,237 @@
                 android:id="@+id/wdg_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:gravity="center"
                 android:paddingHorizontal="15dp"
                 android:paddingVertical="5dp"
                 android:text="Button/ImageButton"
+                android:textSize="16sp"
+                android:textColor="@color/teal"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/wdg_check"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingHorizontal="15dp"
+                android:paddingVertical="5dp"
+                android:text="CheckBox/Radio"
+                android:textSize="16sp"
+                android:textColor="@color/teal"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/wdg_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingHorizontal="15dp"
+                android:paddingVertical="5dp"
+                android:text="Switch/Toggle"
+                android:textSize="16sp"
+                android:textColor="@color/teal"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/wdg_progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingHorizontal="15dp"
+                android:paddingVertical="5dp"
+                android:text="ProgressBar"
+                android:textSize="16sp"
+                android:textColor="@color/teal"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/wdg_seek"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingHorizontal="15dp"
+                android:paddingVertical="5dp"
+                android:text="SeekBar"
+                android:textSize="16sp"
+                android:textColor="@color/teal"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/wdg_date_picker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingHorizontal="15dp"
+                android:paddingVertical="5dp"
+                android:text="DatePicker"
+                android:textSize="16sp"
+                android:textColor="@color/teal"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/wdg_time_picker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingHorizontal="15dp"
+                android:paddingVertical="5dp"
+                android:text="TimePicker"
+                android:textSize="16sp"
+                android:textColor="@color/teal"
+                android:textStyle="bold"/>
+        </com.google.android.flexbox.FlexboxLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingHorizontal="10dp"
+            android:text="菜单选项" />
+        <com.google.android.flexbox.FlexboxLayout
+            app:flexDirection="row"
+            app:flexWrap="wrap"
+            app:justifyContent="space_around"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/wdg_context_menu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingHorizontal="15dp"
+                android:paddingVertical="5dp"
+                android:text="ContextMenu"
+                android:textSize="16sp"
+                android:textColor="@color/teal"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/wdg_popup_menu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingHorizontal="15dp"
+                android:paddingVertical="5dp"
+                android:text="PopupMenu"
+                android:textSize="16sp"
+                android:textColor="@color/teal"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/wdg_option_menu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingHorizontal="15dp"
+                android:paddingVertical="5dp"
+                android:text="OptionMenu"
+                android:textSize="16sp"
+                android:textColor="@color/teal"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/wdg_spanner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingHorizontal="15dp"
+                android:paddingVertical="5dp"
+                android:text="Spanner"
+                android:textSize="16sp"
+                android:textColor="@color/teal"
+                android:textStyle="bold"/>
+        </com.google.android.flexbox.FlexboxLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingHorizontal="10dp"
+            android:text="弹出对话" />
+        <com.google.android.flexbox.FlexboxLayout
+            app:flexDirection="row"
+            app:flexWrap="wrap"
+            app:justifyContent="space_around"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/wdg_alert_dialog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingHorizontal="15dp"
+                android:paddingVertical="5dp"
+                android:text="AlertDialog"
+                android:textSize="16sp"
+                android:textColor="@color/teal"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/wdg_progress_dialog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingHorizontal="15dp"
+                android:paddingVertical="5dp"
+                android:text="ProgressBarDialog"
+                android:textSize="16sp"
+                android:textColor="@color/teal"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/wdg_popup_window"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingHorizontal="15dp"
+                android:paddingVertical="5dp"
+                android:text="PopupWindow"
+                android:textSize="16sp"
+                android:textColor="@color/teal"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/wdg_date_picker_dialog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingHorizontal="15dp"
+                android:paddingVertical="5dp"
+                android:text="Date/TimePickerDialog"
+                android:textSize="16sp"
+                android:textColor="@color/teal"
+                android:textStyle="bold"/>
+
+        </com.google.android.flexbox.FlexboxLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingHorizontal="10dp"
+            android:text="页面列表" />
+        <com.google.android.flexbox.FlexboxLayout
+            app:flexDirection="row"
+            app:flexWrap="wrap"
+            app:justifyContent="space_around"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/wdg_view_pager"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingHorizontal="15dp"
+                android:paddingVertical="5dp"
+                android:text="ViewPager"
+                android:textSize="16sp"
+                android:textColor="@color/teal"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/wdg_view_flipper"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingHorizontal="15dp"
+                android:paddingVertical="5dp"
+                android:text="ViewFlipper"
+                android:textSize="16sp"
+                android:textColor="@color/teal"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/wdg_recycler_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingHorizontal="15dp"
+                android:paddingVertical="5dp"
+                android:text="RecyclerView"
                 android:textSize="16sp"
                 android:textColor="@color/teal"
                 android:textStyle="bold"/>
