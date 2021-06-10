@@ -3,7 +3,9 @@
     package="com.example.ui">
 
     <application>
-        <activity android:name=".wdg.SwitchActivity"></activity>
+        <activity android:name=".wdg.SeekActivity"></activity>
+        <activity android:name=".wdg.ProgressActivity" />
+        <activity android:name=".wdg.SwitchActivity" />
         <activity android:name=".wdg.CheckActivity" />
         <activity android:name=".wdg.BtnActivity" />
         <activity android:name=".wdg.IvActivity" />
