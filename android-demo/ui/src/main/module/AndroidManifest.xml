@@ -3,7 +3,11 @@
     package="com.example.ui">
 
     <application>
-        <activity android:name=".wdg.SeekActivity"></activity>
+        <activity android:name=".menu.MenuActivity"></activity>
+        <activity android:name=".wdg.RatingBarActivity" />
+        <activity android:name=".wdg.TimePickerActivity" />
+        <activity android:name=".wdg.DatePickerActivity" />
+        <activity android:name=".wdg.SeekActivity" />
         <activity android:name=".wdg.ProgressActivity" />
         <activity android:name=".wdg.SwitchActivity" />
         <activity android:name=".wdg.CheckActivity" />
