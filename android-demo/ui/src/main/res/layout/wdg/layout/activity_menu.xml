@@ -33,6 +33,24 @@
             android:text="点击显示PopupMenu"
             android:textColor="@color/green_900"
             android:background="@color/blue_200"/>
+        <Spinner
+            android:id="@+id/spinner_menu"
+            android:entries="@array/spinner_menu_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:padding="8dp"
+            android:spinnerMode="dropdown"
+            android:textColor="@color/green_900" />
+        <TextView
+            android:id="@+id/option_menu_test"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:padding="8dp"
+            android:text="OptionMenu菜单右上角"
+            android:textColor="@color/green_900"
+            android:background="@color/blue_200"/>
 
     </LinearLayout>
 

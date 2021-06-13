@@ -89,6 +89,48 @@ public class HomeFragment extends Fragment {
                 DRouter.build("/switch_activity").start();
             }
         });
+        TextView wdg_date_picker = getActivity().findViewById(R.id.wdg_date_picker);
+        wdg_date_picker.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DRouter.build("/date_picker_activity").start();
+            }
+        });
+        TextView wdg_time_picker = getActivity().findViewById(R.id.wdg_time_picker);
+        wdg_time_picker.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DRouter.build("/time_picker_activity").start();
+            }
+        });
+        TextView wdg_progress = getActivity().findViewById(R.id.wdg_progress);
+        wdg_progress.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DRouter.build("/progress_activity").start();
+            }
+        });
+        TextView wdg_seek = getActivity().findViewById(R.id.wdg_seek);
+        wdg_seek.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DRouter.build("/seek_activity").start();
+            }
+        });
+        TextView wdg_rating_bar = getActivity().findViewById(R.id.wdg_rating_bar);
+        wdg_rating_bar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DRouter.build("/rating_bar_activity").start();
+            }
+        });
+        TextView wdg_menu = getActivity().findViewById(R.id.wdg_menu);
+        wdg_menu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DRouter.build("/menu_activity").start();
+            }
+        });
     }
 
     @Override
