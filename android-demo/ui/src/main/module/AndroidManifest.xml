@@ -3,7 +3,8 @@
     package="com.example.ui">
 
     <application>
-        <activity android:name=".menu.MenuActivity"></activity>
+        <activity android:name=".dialog.DialogActivity"></activity>
+        <activity android:name=".menu.MenuActivity" />
         <activity android:name=".wdg.RatingBarActivity" />
         <activity android:name=".wdg.TimePickerActivity" />
         <activity android:name=".wdg.DatePickerActivity" />
