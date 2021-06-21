@@ -48,6 +48,62 @@
             android:text="AlertDialog多选框"
             android:textColor="@color/green_900"
             android:textSize="15sp" />
+        <TextView
+            android:id="@+id/dialog_progress_circle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="ProgressBarDialog圆形进度条"
+            android:textColor="@color/green_900"
+            android:textSize="15sp" />
+        <TextView
+            android:id="@+id/dialog_progress_linear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="ProgressBarDialog条形进度条"
+            android:textColor="@color/green_900"
+            android:textSize="15sp" />
+        <TextView
+            android:id="@+id/dialog_progress_update"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="ProgressBarDialog更新进度条"
+            android:textColor="@color/green_900"
+            android:textSize="15sp" />
+        <TextView
+            android:id="@+id/popup_window_simple"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="PopupWindow普通弹框"
+            android:textColor="@color/green_900"
+            android:textSize="15sp" />
+        <TextView
+            android:id="@+id/popup_window_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="PopupWindow列表弹框"
+            android:textColor="@color/green_900"
+            android:textSize="15sp" />
+        <TextView
+            android:id="@+id/dialog_date_picker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="DatePickerDialog日期选择框"
+            android:textColor="@color/green_900"
+            android:textSize="15sp" />
+        <TextView
+            android:id="@+id/dialog_time_picker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="TimePickerDialog时间选择框"
+            android:textColor="@color/green_900"
+            android:textSize="15sp" />
 
     </LinearLayout>
 

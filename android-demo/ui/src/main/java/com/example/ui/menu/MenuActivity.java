@@ -43,7 +43,7 @@ public class MenuActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 switch (position){
                     case 0:
-                        Toast.makeText(context,"点击了选项一",Toast.LENGTH_SHORT).show();
+//                        Toast.makeText(context,"点击了选项一",Toast.LENGTH_SHORT).show();
                         break;
                     case 1:
                         Toast.makeText(context,"点击了选项二",Toast.LENGTH_SHORT).show();

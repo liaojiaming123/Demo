@@ -49,6 +49,7 @@ dependencies {
     implementation dependenciesID.appcompat
     implementation dependenciesID.material
     implementation dependenciesID.constraintlayout
+    implementation 'com.google.android:flexbox:2.0.0'
     implementation project(":common")
 
     testImplementation dependenciesID.junit
