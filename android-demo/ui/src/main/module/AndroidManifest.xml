@@ -3,7 +3,10 @@
     package="com.example.ui">
 
     <application>
-        <activity android:name=".dialog.DialogActivity"></activity>
+        <activity android:name=".list.RecyclerViewActivity"></activity>
+        <activity android:name=".list.ViewFlipperActivity" />
+        <activity android:name=".list.ViewPagerActivity" />
+        <activity android:name=".dialog.DialogActivity" />
         <activity android:name=".menu.MenuActivity" />
         <activity android:name=".wdg.RatingBarActivity" />
         <activity android:name=".wdg.TimePickerActivity" />

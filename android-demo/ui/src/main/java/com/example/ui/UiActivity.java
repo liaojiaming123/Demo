@@ -118,6 +118,27 @@ public class UiActivity extends AppCompatActivity {
                 DRouter.build("/dialog_activity").start();
             }
         });
+        TextView wdg_view_pager = findViewById(R.id.wdg_view_pager);
+        wdg_view_pager.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DRouter.build("/view_pager_activity").start();
+            }
+        });
+        TextView wdg_view_flipper = findViewById(R.id.wdg_view_flipper);
+        wdg_view_flipper.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DRouter.build("/view_flipper_activity").start();
+            }
+        });
+        TextView wdg_recycler_view = findViewById(R.id.wdg_recycler_view);
+        wdg_recycler_view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DRouter.build("/recycler_view_activity").start();
+            }
+        });
     }
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
