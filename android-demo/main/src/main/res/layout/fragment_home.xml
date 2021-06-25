@@ -7,6 +7,7 @@
     tools:context=".ui.home.HomeFragment">
 
     <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -15,14 +16,11 @@
         app:layout_constraintTop_toTopOf="parent">
         <androidx.cardview.widget.CardView
             android:id="@+id/cv_activity_ui"
-            app:cardBackgroundColor="@color/teal_a1"
-            android:layout_marginHorizontal="15dp"
-            android:layout_marginVertical="10dp"
+            app:cardBackgroundColor="#F3F7F8"
+            android:layout_marginHorizontal="10dp"
             app:cardUseCompatPadding="true"
             app:cardElevation="8dp"
-            app:contentPadding="2dp"
             app:cardMaxElevation="5dp"
-            android:padding="10dp"
             app:cardCornerRadius="10dp"
             android:foregroundGravity="center"
             android:layout_width="match_parent"
@@ -34,7 +32,7 @@
                 android:layout_weight="1"
                 android:layout_margin="15dp"
                 android:layout_gravity="center_vertical"
-                android:src="@mipmap/ic_launcher_round"/>
+                android:src="@drawable/icon_android_40"/>
 
             <LinearLayout
                 android:id="@+id/lv_activity_ui"
@@ -49,7 +47,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/green_900"
+                    android:textColor="@color/green_500"
                     android:textSize="16sp"
                     android:textStyle="bold"
                     android:text="AndroidX系统UI" />
@@ -58,8 +56,55 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="12sp"
-                    android:textColor="@color/green_900"
+                    android:textColor="@color/green_500"
                     android:text="android系统自带UI 风格一般" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_activity_helper"
+            app:cardBackgroundColor="#FAFAFA"
+            android:layout_marginHorizontal="10dp"
+            app:cardUseCompatPadding="true"
+            app:cardElevation="8dp"
+            app:cardMaxElevation="5dp"
+            app:cardCornerRadius="10dp"
+            android:foregroundGravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/iv_activity_helper"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:layout_margin="15dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/icon_smartphone_40"/>
+
+            <LinearLayout
+                android:id="@+id/lv_activity_helper"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|end"
+                android:gravity="center"
+                android:layout_weight="2"
+                android:layout_margin="15dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/blue_500"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:text="Android常用工具" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:textColor="@color/blue_500"
+                    android:text="权限管理 数据存储 网络请求" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 

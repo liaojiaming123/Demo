@@ -60,6 +60,22 @@ public class HomeFragment extends Fragment {
             }
         });
 
+        ImageView iv_activity_helper = getActivity().findViewById(R.id.iv_activity_helper);
+        iv_activity_helper.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DRouter.build("/helper_activity").start();
+            }
+        });
+        LinearLayout lv_activity_helper = getActivity().findViewById(R.id.lv_activity_helper);
+        lv_activity_helper.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DRouter.build("/helper_activity").start();
+
+            }
+        });
+
     }
 
     @Override
