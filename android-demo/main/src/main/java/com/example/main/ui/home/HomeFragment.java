@@ -75,6 +75,21 @@ public class HomeFragment extends Fragment {
 
             }
         });
+        ImageView iv_activity_media = getActivity().findViewById(R.id.iv_activity_media);
+        iv_activity_media.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DRouter.build("/media_activity").start();
+            }
+        });
+        LinearLayout lv_activity_media = getActivity().findViewById(R.id.lv_activity_media);
+        lv_activity_media.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DRouter.build("/media_activity").start();
+
+            }
+        });
 
     }
 

@@ -10,7 +10,7 @@ android {
     buildToolsVersion androidID.buildToolsVersion
 
     defaultConfig {
-        if (!isRelease){applicationId appID.my}
+        if (!isRelease){applicationId appID.ui}
         minSdkVersion androidID.minSdkVersion
         targetSdkVersion androidID.targetSdkVersion
         versionCode androidID.versionCode

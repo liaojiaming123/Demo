@@ -10,19 +10,13 @@ android {
     buildToolsVersion androidID.buildToolsVersion
 
     defaultConfig {
-        if (!isRelease){applicationId appID.main}
+        if (!isRelease){applicationId appID.media}
         minSdkVersion androidID.minSdkVersion
         targetSdkVersion androidID.targetSdkVersion
         versionCode androidID.versionCode
         versionName androidID.versionName
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-
-//        javaCompileOptions {
-//            annotationProcessorOptions {
-//                arguments = [ AROUTER_MODULE_NAME : project.getName() ]
-//            }
-//        }
     }
 
     buildTypes {
@@ -39,7 +33,7 @@ android {
                 manifest.srcFile 'src/main/AndroidManifest.xml'
             }
             res.srcDirs = [
-                    'src/main/res/layout/widget',
+                    'src/main/res/layout/media',
                     'src/main/res/layout',
                     'src/main/res'
             ]
@@ -49,34 +43,16 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
-    buildFeatures {
-//        viewBinding true
-    }
 }
 
 dependencies {
-    implementation fileTree(dir: "libs", includes: ["*.jar"])
-//    implementation dependenciesID.appcompat
-//    implementation dependenciesID.material
+
+    implementation dependenciesID.appcompat
+    implementation dependenciesID.material
     implementation dependenciesID.constraintlayout
+
     implementation project(":common")
-    implementation project(":my")
-    implementation project(":ui")
-    implementation project(":helper")
-    implementation project(":media")
-
-    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.2.0'
-    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0'
-    implementation 'androidx.navigation:navigation-fragment:2.3.0'
-    implementation 'androidx.navigation:navigation-ui:2.3.0'
-    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-    implementation 'com.google.android:flexbox:2.0.0'
-    implementation 'androidx.appcompat:appcompat:1.2.0'
-    implementation 'com.google.android.material:material:1.2.1'
-
     testImplementation dependenciesID.junit
     androidTestImplementation dependenciesID.androidx_test_ext
     androidTestImplementation dependenciesID.androidx_test_espresso
-//    api rootProject.ext.router.arouter_api
-//    annotationProcessor rootProject.ext.router.arouter_compiler
 }

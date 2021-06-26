@@ -16,6 +16,9 @@ ext {
             app: "com.example.android",
             main: "com.example.main",
             my: "com.example.my",
+            ui: "com.example.ui",
+            helper: "com.example.helper",
+            media: "com.example.media",
     ]
     //第三方库依赖
     dependenciesID = [
