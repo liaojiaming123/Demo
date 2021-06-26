@@ -6,13 +6,17 @@
     <application
         android:name="com.example.common.BaseApplication"
         android:allowBackup="true"
+        android:usesCleartextTraffic="true"
+        android:requestLegacyExternalStorage="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label="Android"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:networkSecurityConfig="@xml/network_security_config"
         android:theme="@style/Theme.AndroidDemo">
         <activity android:name=".AppActivity">
         </activity>
 
+        <uses-library android:name="org.apache.http.legacy" android:required="false"/>
     </application>
 </manifest>

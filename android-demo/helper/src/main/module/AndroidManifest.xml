@@ -4,11 +4,17 @@
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
-    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application>
-        <activity android:name=".perm.EasyPermissionActivity"></activity>
+        <activity android:name=".net.HttpConnActivity"></activity>
+        <activity android:name=".store.ExternalActivity" />
+        <activity android:name=".store.InternalActivity" />
+        <activity android:name=".store.SpActivity" />
+        <activity android:name=".perm.EasyPermissionActivity" />
         <activity android:name=".perm.AndPermissionActivity" />
         <activity android:name=".perm.PermActivity" />
         <activity android:name=".HelperActivity" />

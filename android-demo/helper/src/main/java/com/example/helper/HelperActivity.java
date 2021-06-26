@@ -48,6 +48,35 @@ public class HelperActivity extends AppCompatActivity {
                 DRouter.build("/easy_permission_activity").start();
             }
         });
+
+        TextView tv_sp = findViewById(R.id.tv_sp);
+        tv_sp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DRouter.build("/sp_activity").start();
+            }
+        });
+        TextView tv_in = findViewById(R.id.tv_in);
+        tv_in.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DRouter.build("/internal_activity").start();
+            }
+        });
+        TextView tv_ex = findViewById(R.id.tv_ex);
+        tv_ex.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DRouter.build("/external_activity").start();
+            }
+        });
+        TextView tv_http_conn = findViewById(R.id.tv_http_conn);
+        tv_http_conn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DRouter.build("/http_conn_activity").start();
+            }
+        });
     }
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {

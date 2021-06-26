@@ -52,6 +52,66 @@
                 android:textSize="16sp"/>
         </com.google.android.flexbox.FlexboxLayout>
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="5dp"
+            android:padding="5dp"
+            android:text="数据存储"/>
+        <com.google.android.flexbox.FlexboxLayout
+            app:flexDirection="row"
+            app:flexWrap="wrap"
+            app:justifyContent="space_around"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="SP"
+                android:textColor="@color/blue_500"
+                android:textSize="16sp"/>
+            <TextView
+                android:id="@+id/tv_in"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="InternalStore"
+                android:textColor="@color/blue_500"
+                android:textSize="16sp"/>
+            <TextView
+                android:id="@+id/tv_ex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="ExternalStore"
+                android:textColor="@color/blue_500"
+                android:textSize="16sp"/>
+        </com.google.android.flexbox.FlexboxLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="5dp"
+            android:padding="5dp"
+            android:text="网络请求"/>
+        <com.google.android.flexbox.FlexboxLayout
+            app:flexDirection="row"
+            app:flexWrap="wrap"
+            app:justifyContent="space_around"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_http_conn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="HttpURLConnection"
+                android:textColor="@color/blue_500"
+                android:textSize="16sp"/>
+
+        </com.google.android.flexbox.FlexboxLayout>
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
