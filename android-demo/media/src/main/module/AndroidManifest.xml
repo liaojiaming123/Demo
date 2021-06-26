@@ -3,8 +3,9 @@
     package="com.example.media">
 
     <application>
-        <activity android:name=".MediaActivity">
-        </activity>
+        <activity android:name=".player.SoundPoolActivity"></activity>
+        <activity android:name=".player.MusicPlayerActivity" />
+        <activity android:name=".MediaActivity" />
     </application>
 
 </manifest>

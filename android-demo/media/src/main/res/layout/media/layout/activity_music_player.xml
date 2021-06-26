@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".player.MusicPlayerActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginVertical="20dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/music_play_play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="5dp"
+            android:text="播放/暂停"
+            android:textColor="@color/pink_500"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/music_play_stop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="5dp"
+            android:text="停止"
+            android:textColor="@color/pink_500"
+            android:textSize="16sp" />
+
+        <Switch
+            android:id="@+id/music_loop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:showText="true"
+            android:text="循环"
+            android:textColor="@color/pink_500"
+            android:textOff="关"
+            android:textOn="开" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginVertical="20dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <TextView
+            android:id="@+id/tv_music_play_position"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="进度" />
+
+        <SeekBar
+            android:id="@+id/music_seek_bar"
+            android:layout_width="0dp"
+            android:layout_height="5dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="4"
+            android:max="100"
+            android:progress="0" />
+
+        <TextView
+            android:id="@+id/tv_music_play_length"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="时长" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
