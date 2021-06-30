@@ -19,6 +19,7 @@ ext {
             ui: "com.example.ui",
             helper: "com.example.helper",
             media: "com.example.media",
+            tools: "com.example.tools",
     ]
     //第三方库依赖
     dependenciesID = [

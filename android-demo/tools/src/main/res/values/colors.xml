@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal">#008080</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_a1">#A7FFEB</color>
+    <color name="teal_a2">#64FFDA</color>
+    <color name="teal_a4">#1DE9B6</color>
+    <color name="teal_a5">#00BFA5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="red_200">#FECACA</color>
+    <color name="red_400">#F87171</color>
+    <color name="red_500">#EF4444</color>
+    <color name="red_700">#B91C1C</color>
+    <color name="green_200">#A7F3D0</color>
+    <color name="green_400">#34D399</color>
+    <color name="green_500">#10B981</color>
+    <color name="green_700">#047857</color>
+    <color name="green_800">#047857</color>
+    <color name="green_900">#064E3B</color>
+    <color name="blue_200">#BFDBFE</color>
+    <color name="blue_400">#60A5FA</color>
+    <color name="blue_500">#3B82F6</color>
+    <color name="blue_700">#1D4ED8</color>
+    <color name="pink_200">#FBCFE8</color>
+    <color name="pink_400">#F472B6</color>
+    <color name="pink_500">#EC4899</color>
+    <color name="pink_700">#BE185D</color>
+    <color name="yellow_200">#FDE68A</color>
+    <color name="yellow_400">#FBBF24</color>
+    <color name="yellow_500">#F59E0B</color>
+    <color name="yellow_700">#B45309</color>
+</resources>
