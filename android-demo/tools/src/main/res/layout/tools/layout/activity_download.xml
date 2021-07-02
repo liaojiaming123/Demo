@@ -4,60 +4,61 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.tools.ToolsFragment">
+    tools:context=".DownloadActivity">
 
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="8dp"
+        android:padding="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <LinearLayout
-            android:orientation="horizontal"
-            android:gravity="center"
+        <EditText
+            android:id="@+id/download_url"
+            android:padding="5dp"
             android:layout_width="match_parent"
-            android:layout_margin="5dp"
+            android:layout_height="wrap_content"
+            android:hint="请输入要下载的url"
+            android:text="https://m801.music.126.net/20210702204819/9263d896209ffecbb3b3ca67478f3824/jdyyaac/obj/w5rDlsOJwrLDjj7CmsOj/8701166165/6990/f9b9/1c4f/1bc18fe8965ab91f8d556c9b4b9a64b3.m4a"
+            android:maxHeight="32dp"/>
+        <LinearLayout
+            android:padding="5dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <TextView
-                android:id="@+id/tools_intent"
+                android:id="@+id/download_start"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Intent大全"
+                android:layout_height="wrap_content"
                 android:gravity="center"
-                android:textSize="16sp"
-                android:drawableTop="@drawable/tools_intent_32"/>
+                android:text="下载"
+                android:textSize="15sp"/>
             <TextView
-                android:id="@+id/tools_download"
+                android:id="@+id/download_stop"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="下载器"
+                android:layout_height="wrap_content"
                 android:gravity="center"
-                android:textSize="16sp"
-                android:drawableTop="@drawable/tools_download_32"/>
+                android:text="暂停"
+                android:textSize="15sp"/>
             <TextView
-                android:id="@+id/tools_scan"
+                android:id="@+id/download_cancel"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="扫一扫"
-                android:gravity="center"
-                android:textSize="16sp"
-                android:drawableTop="@drawable/tools_scan_32"/>
-            <TextView
-                android:id="@+id/tools_transfer"
-                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="文件传输"
                 android:gravity="center"
-                android:textSize="16sp"
-                android:drawableTop="@drawable/tools_transfer_32"/>
+                android:text="取消"
+                android:textSize="15sp"/>
         </LinearLayout>
+        <ProgressBar
+            android:id="@+id/download_progress_bar"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:padding="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
     </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

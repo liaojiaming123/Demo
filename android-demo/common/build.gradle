@@ -41,6 +41,8 @@ dependencies {
     implementation dependenciesID.appcompat
     implementation dependenciesID.material
     implementation dependenciesID.constraintlayout
+    implementation 'com.blankj:utilcodex:1.30.6'
+
     testImplementation dependenciesID.junit
     androidTestImplementation dependenciesID.androidx_test_ext
     androidTestImplementation dependenciesID.androidx_test_espresso

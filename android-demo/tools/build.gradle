@@ -17,6 +17,8 @@ android {
         versionName androidID.versionName
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        ndkVersion '21.0.6113669'
     }
 
     buildTypes {
@@ -50,8 +52,13 @@ dependencies {
     implementation dependenciesID.material
     implementation dependenciesID.constraintlayout
     implementation 'com.google.android:flexbox:2.0.0'
+    implementation 'com.blankj:utilcodex:1.30.6'
+    implementation 'me.laoyuyu.aria:core:3.8.16'
+    implementation 'com.github.bingoogolapple.BGAQRCode-Android:zxing:1.3.8'
+    implementation 'com.github.bingoogolapple.BGAQRCode-Android:zbar:1.3.8'
     implementation project(":common")
 
+    annotationProcessor 'me.laoyuyu.aria:compiler:3.8.16'
     testImplementation dependenciesID.junit
     androidTestImplementation dependenciesID.androidx_test_ext
     androidTestImplementation dependenciesID.androidx_test_espresso

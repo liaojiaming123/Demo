@@ -6,6 +6,7 @@ import android.content.Context;
 //import com.sankuai.waimai.router.Router;
 //import com.sankuai.waimai.router.common.DefaultRootUriHandler;
 
+import com.blankj.utilcode.util.Utils;
 import com.didi.drouter.api.DRouter;
 
 //import com.alibaba.android.arouter.launcher.ARouter;
@@ -20,7 +21,7 @@ public class BaseApplication extends Application {
 //        ARouter.openLog();
 //        ARouter.openDebug();
 //        ARouter.init(BaseApplication.this);
-//        Utils.init(BaseApplication.this);
+        Utils.init(BaseApplication.this);
         DRouter.init(this);
         // 创建RootHandler
 //        DefaultRootUriHandler rootHandler = new DefaultRootUriHandler(context);
