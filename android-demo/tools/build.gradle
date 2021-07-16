@@ -1,3 +1,4 @@
+apply plugin: 'com.yanzhenjie.andserver'
 if (isRelease){
     apply plugin: 'com.android.library'
 } else { apply plugin: 'com.android.application'}
@@ -17,8 +18,6 @@ android {
         versionName androidID.versionName
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-
-        ndkVersion '21.0.6113669'
     }
 
     buildTypes {
@@ -58,6 +57,8 @@ dependencies {
     implementation 'com.github.bingoogolapple.BGAQRCode-Android:zbar:1.3.8'
     implementation project(":common")
 
+    implementation 'com.yanzhenjie.andserver:api:2.1.9'
+//    annotationProcessor 'com.yanzhenjie.andserver:processor:2.1.9'
     annotationProcessor 'me.laoyuyu.aria:compiler:3.8.16'
     testImplementation dependenciesID.junit
     androidTestImplementation dependenciesID.androidx_test_ext
